@@ -1,2 +1,7 @@
 @import 'nav';
 @import 'header';
+
+body {
+  overflow-x: hidden;
+  background: rgba(0, 0, 0, 1);
+}
