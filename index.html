@@ -13,19 +13,19 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Bootstrap</title>
   </head>
 
   <body>
     <!-- HEADER -->
     <!-- NAV -->
-    <header>
-      <nav class="navbar-expand-sm navbar-light bg-light">
-        <div class="container-fluid nav__">
-          <span class="navbar-brand mb-0 h1 nav__text">Summer Photo Gallery</span>
-        </div>
-      </nav>
-      <div class="header__background">
+    <header class="header__background">
+      <h1 class="logo">Summer photos</h1>
+      <div class="header__cont">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -52,8 +52,38 @@
             <span class="visually-hidden">Next</span>
           </button>
         </div>
+        <div class="scroll__container">
+          <a href="#down" class="animate__animated animate__fadeInDown animate__infinite animate__delay-5s animate__slow">Scroll Down</a>
+        </div>
       </div>
     </header>
+
+    <main>
+      <div class="background-overlay">
+        <h1>
+          Want to see more photos? <br />
+          Sign up to our newsletter
+        </h1>
+        <div class="form__container">
+          <form id="down">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="email" class="form-control" id="name" aria-describedby="emailHelp" />
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" />
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+              <label class="form-check-label" for="exampleCheck1">Sign up for news letter</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </main>
 
     <!-- BOOTSTRAP -->
     <script
